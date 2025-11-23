@@ -1,6 +1,3 @@
-#include <stdio.h>
-#include <GL/glut.h>
-
 #define speed 8
 
 typedef struct {

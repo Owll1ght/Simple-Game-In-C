@@ -1,5 +1,5 @@
 #include <GL/glut.h>
-#include "p_playerStateMovement.c"
+#include "p_enemyStateMovement.c"
 
 typedef struct {
   int fr1,fr2;
@@ -10,7 +10,9 @@ void display()
   if(T.fr1-T.fr2>=40){
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     playerMovement();
+    enemyMovement();
     drawPlayer();
+    drawEnemy();
 
     T.fr2=T.fr1;
     glutSwapBuffers();
@@ -24,6 +26,7 @@ void initDisplay()
 {
   glClearColor(0.5,0.5,0.5,0.0);
   gluOrtho2D(0,1024,512,0);
+  initEnemy();
   initPlayer();
 }
 

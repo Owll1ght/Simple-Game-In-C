@@ -1,6 +1,6 @@
 #include <math.h>
 #include "p_playerStateMovement.h"
-#include "m_math.c"
+#include "m_math.h"
 
 Keyboard K;
 playerPosition p_Pp;
@@ -49,13 +49,19 @@ void playerMovement()
 
   p_Pp.px += p_Mv.mx * speed;
   p_Pp.py += p_Mv.my * speed;
+
+  if(p_Pp.px < 0){ p_Pp.px = 0; }
+  if(p_Pp.py < 0){ p_Pp.py = 0; }
+  if(p_Pp.px > 1024){ p_Pp.px = 1024; }
+  if(p_Pp.py > 512 ){ p_Pp.py = 512;  }
   
 }
 
 void drawPlayer()
 {
   float x1,y1,x2,y2,x3,y3,x4,y4;
-  squareShape(16,p_Pp.px,p_Pp.py,&x1,&y1,&x2,&y2,&x3,&y3,&x4,&y4);
+  float size = 16;
+  squareShape(size,p_Pp.px,p_Pp.py,&x1,&y1,&x2,&y2,&x3,&y3,&x4,&y4);
   glColor3f(0,1,0);
   glPointSize(3);
   glBegin(GL_POINTS);
@@ -71,6 +77,6 @@ void drawPlayer()
 
 void initPlayer()
 {
-  p_Pp.px = 300;
-  p_Pp.py = 300;
+  p_Pp.px = 512;
+  p_Pp.py = 256;
 }
