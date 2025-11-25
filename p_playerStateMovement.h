@@ -1,5 +1,7 @@
 #define speed 8
 
+int time1;
+
 typedef struct {
   int w;
   int a;

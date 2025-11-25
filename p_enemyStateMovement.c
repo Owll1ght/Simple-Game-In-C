@@ -6,24 +6,13 @@
 enemyPosition p_e;
 enemyMove m_e;
 
-int randomMovement()
-{
-  int max = 1;
-  int min = -1;
-
-  int rd_num = rand() % (max - min + 1) + min; 
-
-  return rd_num;
-}
-
 void enemyMovement()
 {
-  int time1, time2;
-  if(time1-time2>=40){
+  if(time1>=10){
     m_e.m_ex = 0.0f;
-    m_e.m_ex = (float)randomMovement();
+    m_e.m_ex = xymove[rand()%length];
     m_e.m_ey = 0.0f;
-    m_e.m_ey = (float)randomMovement();
+    m_e.m_ey = xymove[rand()%length];
 
     if(m_e.m_ex != 0.0f && m_e.m_ey != 0.0f){
       float magnitude = Q_rsqrt((m_e.m_ex*m_e.m_ex)+(m_e.m_ey*m_e.m_ey));
@@ -31,13 +20,14 @@ void enemyMovement()
       m_e.m_ex *= magnitude;
       m_e.m_ey *= magnitude;
     }
-
-    time2=time1;
-    p_e.ex += m_e.m_ex * enemySpeed;
-    p_e.ey += m_e.m_ey * enemySpeed;
+    time1=0;    
   } 
+  time1++;
 
-  time1 = time(0);
+  printf("Ex = %d, Ey = %d\n",p_e.ex,p_e.ey);
+  printf("SpeedX = %f, SpeedY = %f\n",m_e.m_ex,m_e.m_ey);
+  p_e.ex += m_e.m_ex * enemySpeed;
+  p_e.ey += m_e.m_ey * enemySpeed;
 
   if(p_e.ex < 0){ p_e.ex = 0; }
   if(p_e.ey < 0){ p_e.ey = 0; }
