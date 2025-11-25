@@ -1,6 +1,3 @@
-#include <GL/glut.h>
-#include "p_enemyStateMovement.c"
-
 typedef struct {
   int fr1,fr2;
 } Time; Time T;

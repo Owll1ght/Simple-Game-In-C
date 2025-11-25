@@ -1,7 +1,3 @@
-#include <math.h>
-#include "p_playerStateMovement.h"
-#include "m_math.h"
-
 Keyboard K;
 playerPosition p_Pp;
 playerMove p_Mv;

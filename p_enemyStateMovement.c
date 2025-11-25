@@ -1,8 +1,3 @@
-#include <stdlib.h>
-#include <time.h>
-#include "p_enemyStateMovement.h"
-#include "p_playerStateMovement.c"
-
 enemyPosition p_e;
 enemyMove m_e;
 
@@ -24,8 +19,8 @@ void enemyMovement()
   } 
   time1++;
 
-  printf("Ex = %d, Ey = %d\n",p_e.ex,p_e.ey);
-  printf("SpeedX = %f, SpeedY = %f\n",m_e.m_ex,m_e.m_ey);
+  // printf("Ex = %d, Ey = %d\n",p_e.ex,p_e.ey);
+  // printf("SpeedX = %f, SpeedY = %f\n",m_e.m_ex,m_e.m_ey);
   p_e.ex += m_e.m_ex * enemySpeed;
   p_e.ey += m_e.m_ey * enemySpeed;
 
