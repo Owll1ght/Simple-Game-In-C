@@ -3,13 +3,13 @@
 #include <stdlib.h>
 #include <time.h>
 
-#include "p_enemyStateMovement.h"
-#include "p_playerStateMovement.h"
-#include "m_math.h"
+#include "h_files/p_enemyStateMovement.h"
+#include "h_files/p_playerStateMovement.h"
+#include "h_files/m_math.h"
 
-#include "p_playerStateMovement.c"
-#include "p_enemyStateMovement.c"
-#include "d_display.c"
+#include "c_files/p_playerStateMovement.c"
+#include "c_files/p_enemyStateMovement.c"
+#include "c_files/d_display.c"
 
 int main
 (
