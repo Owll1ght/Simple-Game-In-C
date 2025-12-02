@@ -33,8 +33,7 @@ void enemyMovement()
 void drawEnemy()
 {
   float x1,y1,x2,y2,x3,y3,x4,y4;
-  float size = 32;
-  squareShape(size,p_e.ex,p_e.ey,&x1,&y1,&x2,&y2,&x3,&y3,&x4,&y4);
+  squareShape(enemySize,p_e.ex,p_e.ey,&x1,&y1,&x2,&y2,&x3,&y3,&x4,&y4); 
   glColor3f(1,0,0);
   glPointSize(8);
   glBegin(GL_POINTS);

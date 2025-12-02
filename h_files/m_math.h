@@ -17,7 +17,7 @@ float Q_rsqrt( float number )
 
 void squareShape
 (
- float size, 
+ int size, 
  float pos_x, 
  float pos_y, 
  float* x1, 
@@ -31,12 +31,12 @@ void squareShape
 )
 {
   float r_size = (int)size>>1;
-  *y1 = pos_y-r_size;
   *x1 = pos_x-r_size;
-  *y2 = pos_y-r_size;
+  *y1 = pos_y+r_size;
   *x2 = pos_x+r_size;
-  *y3 = pos_y+r_size;
+  *y2 = pos_y+r_size;
   *x3 = pos_x+r_size;
-  *y4 = pos_y+r_size;
+  *y3 = pos_y-r_size;
   *x4 = pos_x-r_size;
+  *y4 = pos_y-r_size;
 }

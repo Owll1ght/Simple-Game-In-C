@@ -2,6 +2,7 @@
 #include <math.h>
 #include <stdlib.h>
 #include <time.h>
+#include <stdbool.h>
 
 #include "h_files/p_enemyStateMovement.h"
 #include "h_files/p_playerStateMovement.h"
@@ -9,6 +10,7 @@
 
 #include "c_files/p_playerStateMovement.c"
 #include "c_files/p_enemyStateMovement.c"
+#include "c_files/p_collisionDetection.c"
 #include "c_files/d_display.c"
 
 int main
@@ -18,4 +20,5 @@ int main
 ){
   glutInit(&argc, argv);
   displayStart();
+  return 0;
 }

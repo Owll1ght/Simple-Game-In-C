@@ -56,8 +56,7 @@ void playerMovement()
 void drawPlayer()
 {
   float x1,y1,x2,y2,x3,y3,x4,y4;
-  float size = 16;
-  squareShape(size,p_Pp.px,p_Pp.py,&x1,&y1,&x2,&y2,&x3,&y3,&x4,&y4);
+  squareShape(playerSize,p_Pp.px,p_Pp.py,&x1,&y1,&x2,&y2,&x3,&y3,&x4,&y4);
   glColor3f(0,1,0);
   glPointSize(3);
   glBegin(GL_POINTS);

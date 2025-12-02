@@ -1,5 +1,7 @@
 #define enemySpeed 20
 
+const int enemySize = 32;
+
 typedef struct {
   int ex, ey;
 } enemyPosition;
