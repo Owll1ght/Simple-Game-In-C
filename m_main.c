@@ -6,8 +6,9 @@
 
 #include "h_files/p_enemyStateMovement.h"
 #include "h_files/p_playerStateMovement.h"
-#include "h_files/m_math.h"
+#include "h_files/i_init.h"
 
+#include "c_files/m_math.c"
 #include "c_files/p_playerStateMovement.c"
 #include "c_files/p_enemyStateMovement.c"
 #include "c_files/p_collisionDetection.c"

@@ -49,6 +49,6 @@ void drawEnemy()
 
 void initEnemy()
 {
-  p_e.ex = 300;
-  p_e.ey = 300;
+  p_e.ex = enemyPositionX;
+  p_e.ey = enemyPositionY;
 }

@@ -4,7 +4,7 @@ typedef struct {
 
 void display()
 {
-  if(T.fr1-T.fr2>=40){
+  if(T.fr1-T.fr2>=elapsedTime){
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     playerMovement();
     enemyMovement();

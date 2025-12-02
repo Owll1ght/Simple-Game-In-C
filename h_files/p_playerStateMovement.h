@@ -1,7 +1,4 @@
-#define speed 8
-
 int time1;
-const int playerSize = 16;
 
 typedef struct {
   int w;

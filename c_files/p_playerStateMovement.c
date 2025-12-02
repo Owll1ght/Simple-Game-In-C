@@ -72,6 +72,6 @@ void drawPlayer()
 
 void initPlayer()
 {
-  p_Pp.px = 512;
-  p_Pp.py = 256;
+  p_Pp.px = playerPositionX;
+  p_Pp.py = playerPositionY;
 }
