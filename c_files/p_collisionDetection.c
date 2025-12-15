@@ -2,8 +2,8 @@ bool collide()
 {
   float px1,py1,px2,py2,px3,py3,px4,py4;
   float ex1,ey1,ex2,ey2,ex3,ey3,ex4,ey4;
-  squareShape(playerSize,p_Pp.px,p_Pp.py,&px1,&py1,&px2,&py2,&px3,&py3,&px4,&py4);
-  squareShape(enemySize ,p_e.ex ,p_e.ey ,&ex1,&ey1,&ex2,&ey2,&ex3,&ey3,&ex4,&ey4);
+  squareShape(playerSize,p_Pp.x,p_Pp.y,&px1,&py1,&px2,&py2,&px3,&py3,&px4,&py4);
+  squareShape(enemySize ,p_e.x ,p_e.y ,&ex1,&ey1,&ex2,&ey2,&ex3,&ey3,&ex4,&ey4);
   // px1 = px4; px2 = px3;
   // py1 = py2; py3 = py4;
   // ex1 = ex4; ex2 = ex3;

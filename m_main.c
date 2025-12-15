@@ -3,9 +3,9 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdbool.h>
+#include <stdio.h>
 
-#include "h_files/p_enemyStateMovement.h"
-#include "h_files/p_playerStateMovement.h"
+#include "h_files/p_entityStateMovement.h"
 #include "h_files/i_init.h"
 
 #include "c_files/m_math.c"

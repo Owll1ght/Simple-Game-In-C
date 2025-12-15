@@ -1,6 +1,6 @@
 Keyboard K;
-playerPosition p_Pp;
-playerMove p_Mv;
+entityPosition p_Pp;
+entityMove p_Mv;
 
 void buttonsDown
 (
@@ -43,24 +43,24 @@ void playerMovement()
     p_Mv.mx *= magnitude;
   }
 
-  p_Pp.px += p_Mv.mx * speed;
-  p_Pp.py += p_Mv.my * speed;
+  p_Pp.x += p_Mv.mx * speed;
+  p_Pp.y += p_Mv.my * speed;
 
-  if(p_Pp.px < 0){ p_Pp.px = 0; }
-  if(p_Pp.py < 0){ p_Pp.py = 0; }
-  if(p_Pp.px > 1024){ p_Pp.px = 1024; }
-  if(p_Pp.py > 512 ){ p_Pp.py = 512;  }
+  if(p_Pp.x < 0){ p_Pp.x = 0; }
+  if(p_Pp.y < 0){ p_Pp.y = 0; }
+  if(p_Pp.x > 1024){ p_Pp.x = 1024; }
+  if(p_Pp.y > 512 ){ p_Pp.y = 512;  }
   
 }
 
 void drawPlayer()
 {
   float x1,y1,x2,y2,x3,y3,x4,y4;
-  squareShape(playerSize,p_Pp.px,p_Pp.py,&x1,&y1,&x2,&y2,&x3,&y3,&x4,&y4);
+  squareShape(playerSize,p_Pp.x,p_Pp.y,&x1,&y1,&x2,&y2,&x3,&y3,&x4,&y4);
   glColor3f(0,1,0);
   glPointSize(3);
   glBegin(GL_POINTS);
-  glVertex2i(p_Pp.px,p_Pp.py);
+  glVertex2i(p_Pp.x,p_Pp.y);
   glEnd();
   glBegin(GL_LINE_LOOP);
   glVertex2i(x1,y1);
@@ -72,6 +72,6 @@ void drawPlayer()
 
 void initPlayer()
 {
-  p_Pp.px = playerPositionX;
-  p_Pp.py = playerPositionY;
+  p_Pp.x = playerPositionX;
+  p_Pp.y = playerPositionY;
 }
